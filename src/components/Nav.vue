@@ -1,5 +1,7 @@
 <template>
-  <nav></nav>
+  <nav>
+    <NavItem />
+  </nav>
 </template>
 <script>
   import NavItem from './nav/NavItem'

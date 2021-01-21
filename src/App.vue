@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Nav v-bind:themeClass="themeClass" />
+    <Nav />
     <Header />
-    <Main v-bind:isLight="isLight" v-bind:themeClass="themeClass" />
-    <Footer v-bind:themeClass="themeClass" />
+    <Main />
+    <Footer />
     <i
       class="theme-btn big icon"
       v-bind:class="modeIcon"
