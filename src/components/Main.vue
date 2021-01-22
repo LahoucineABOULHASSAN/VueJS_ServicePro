@@ -19,6 +19,62 @@
       About,
       Features,
     },
+    data() {
+      return {
+        isScrolled: false,
+      }
+    },
+    mounted() {
+      window.onscroll = () => {
+        // fix nav on top
+        this.fixTop()
+        // numbers increament
+        const item = document.getElementById('nbrs')
+        const services = document.getElementById('our-services')
+        const btn = document.querySelector('.to-top')
+        let shouldAnimate =
+          window.scrollY + window.innerHeight >= item.offsetTop
+        let shouldStick =
+          window.scrollY + window.innerHeight >= services.offsetTop
+        if (shouldAnimate && !this.isScrolled) {
+          this.increase()
+        }
+        if (shouldStick) {
+          btn.classList.add('fix-to-top')
+        } else btn.classList.remove('fix-to-top')
+      }
+    },
+    methods: {
+      fixTop() {
+        const nav = document.getElementById('myTopnav')
+        if (
+          document.body.scrollTop > 36 ||
+          document.documentElement.scrollTop > 36
+        ) {
+          nav.classList.add('sticky')
+        } else {
+          nav.classList.remove('sticky')
+        }
+      },
+      incEltNbr(elem) {
+        const endNbr = Number(elem.innerHTML)
+        this.incNbrRec(0, endNbr, elem)
+      },
+      incNbrRec(i, endNbr, elt) {
+        let speed = 2
+        if (i <= endNbr) {
+          elt.innerHTML = i
+          setTimeout(() => {
+            this.incNbrRec(i + 1, endNbr, elt)
+          }, speed)
+        }
+      },
+      increase() {
+        const items = document.querySelectorAll('.nbr')
+        items.forEach((item) => this.incEltNbr(item))
+        this.isScrolled = true
+      },
+    },
   }
 </script>
 <style>
