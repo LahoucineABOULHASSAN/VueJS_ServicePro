@@ -78,7 +78,7 @@
   }
   .subscribe ul li {
     display: inline-block;
-    color: var(--blue);
+    color: var(--secondary);
     margin: 0 0.25rem;
   }
   .subscribe ul li:hover {

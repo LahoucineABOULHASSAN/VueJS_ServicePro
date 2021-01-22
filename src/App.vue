@@ -29,7 +29,7 @@
   /* VARIABLES DECLARATION */
   :root {
     --primary: #f4a950;
-    --secondary: #ea2348bf;
+    --secondary: #42b883;
     --dark: #1d1b1b;
     --darker: #111111;
     --light: #e9e9e9;

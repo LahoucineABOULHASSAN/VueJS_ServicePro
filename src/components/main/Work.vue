@@ -57,7 +57,7 @@
   .work ul li span {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--blue);
+    color: var(--secondary);
   }
   .work ul li p {
     margin: 0.3rem 0;

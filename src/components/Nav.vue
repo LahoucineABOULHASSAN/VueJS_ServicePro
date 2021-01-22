@@ -66,11 +66,11 @@
   }
   .topnav .navBtn:hover {
     background: none;
-    color: var(--blue);
+    color: var(--secondary);
   }
   .topnav .active {
     background: var(--lightTransparence);
-    color: var(--blue);
+    color: var(--secondary);
   }
   /* Screen styles */
   @media screen and (max-width: 620px) {

@@ -71,8 +71,8 @@
   }
   .btn.btn-secondary {
     color: var(--dark);
-    background: var(--blue);
-    border: 1px solid var(--blue);
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
   }
   .btn.btn-primary:hover {
     background: none;
@@ -83,8 +83,8 @@
   .btn.btn-secondary:hover {
     background: none;
     border-radius: 3px;
-    color: var(--blue);
-    border: 1px solid var(--blue);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
   }
   /* Media Queries */
   @media screen and (max-width: 728px) {

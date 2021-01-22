@@ -70,7 +70,8 @@
   .to-top {
     width: 38px;
     height: 38px;
-    color: var(--dark);
+    color: var(--blue);
+    background: var(--lightTransparence);
     border: none;
     border-radius: 50%;
     position: absolute;
