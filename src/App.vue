@@ -4,7 +4,6 @@
     <Header />
     <Main />
     <Footer />
-    <a href="#"><i class="to-top angle double up big icon"></i></a>
   </div>
 </template>
 
@@ -72,22 +71,6 @@
   .to-right {
     float: right;
   }
-  .fix-to-top {
-    position: fixed;
-  }
-  /*  to top button */
-  .to-top {
-    width: 38px;
-    height: 38px;
-    color: var(--dark);
-    border: none;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 2;
-  }
-
   /* media queries */
   @media screen and (min-width: 1368px) {
     #root {

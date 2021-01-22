@@ -4,7 +4,12 @@
     <div class="details">
       <Infos />
     </div>
-    <p class="copyrights">Copyright &copy; 2021 | <span> ServicePro</span></p>
+    <p class="copyrights">
+      Copyright &copy; 2021 | <span> ServicePro</span
+      ><a href="#top" class="to-top ">
+        <i class=" angle double up big icon"></i>
+      </a>
+    </p>
   </footer>
 </template>
 <script>
@@ -60,6 +65,25 @@
   .footer-infos li.icon-item {
     display: inline-block;
     color: var(--primary);
+  }
+  /*  to top button */
+  .to-top {
+    width: 38px;
+    height: 38px;
+    color: var(--dark);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+  }
+  .fix-to-top {
+    position: fixed;
   }
   /* Media Queries */
   @media screen and (max-width: 768px) {
