@@ -4,11 +4,7 @@
     <Header />
     <Main />
     <Footer />
-    <i
-      class="theme-btn big icon"
-      v-bind:class="modeIcon"
-      v-on:click="theme()"
-    ></i>
+    <a href="#"><i class="to-top angle double up big icon"></i></a>
   </div>
 </template>
 
@@ -25,23 +21,6 @@
       Main,
       Footer,
     },
-    data() {
-      return {
-        isLight: true,
-        themeClass: 'light',
-        modeIcon: 'moon',
-      }
-    },
-    methods: {
-      theme() {
-        this.isLight = !this.isLight
-        this.themeBtn()
-        this.isLight ? (this.themeClass = 'light') : (this.themeClass = 'dark')
-      },
-      themeBtn() {
-        this.isLight ? (this.modeIcon = 'moon') : (this.modeIcon = 'sun')
-      },
-    },
   }
 </script>
 
@@ -50,15 +29,17 @@
   @import url('https://fonts.googleapis.com/css?family=News+Cycle&display=swap');
   /* VARIABLES DECLARATION */
   :root {
-    --primary: #ea0c35;
+    --primary: #f4a950;
     --secondary: #ea2348bf;
-    --dark: #353535;
-    --darker: #252525;
-    --light: #c1c1c1;
-    --lighter: #e0e0e0;
-    --lightTransparence: #0000003b;
+    --dark: #1d1b1b;
+    --darker: #111111;
+    --light: #e9e9e9;
+    --lighter: #f7f7f7;
+    --lightTransparence: #191818d9;
     --blue: #3396b5;
     --bluer: #607d8b;
+    --animate-duration: 2500ms;
+    --animate-delay: 0.9s;
   }
   * {
     margin: 0;
@@ -66,108 +47,55 @@
     font-family: sans-serif;
     box-sizing: border-box;
   }
-  body {
-    font-family: 'Abel', sans-serif, -apple-system, BlinkMacSystemFont,
-      'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-      'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  header h1,
-  header h2 {
-    text-transform: uppercase;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Abel', sans-serif;
-    margin: 1rem auto;
+  a {
+    text-decoration: none;
+    color: inherit;
   }
   img {
     width: 100%;
-    clear: both;
-  }
-  i {
-    margin-right: 1rem;
   }
   ul {
     list-style: none;
   }
-  hr {
-    margin: 1rem 0;
-  }
-  section {
-    margin: 56.8px auto;
-  }
-  .container {
-    padding: 1.7rem;
+  .clear {
+    clear: both;
   }
   .grid {
     display: grid;
     grid-gap: 1rem;
   }
-  .headline {
-    padding-bottom: 1rem;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid var(--bluer);
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  .gradient-light {
-    background: linear-gradient(-45deg, var(--light) 70%, var(--dark) 30%);
-  }
-  .gradient-dark {
-    background: linear-gradient(-45deg, var(--light) 30%, var(--dark) 0%);
-  }
-
-  .theme-btn {
-    width: 38px;
-    height: 38px;
-    position: fixed;
-    bottom: 2rem;
-    right: 1rem;
-    z-index: 1;
-  }
   /* -------------------------------------- */
   /* special classes */
-  .light {
-    background-color: var(--light);
+  .to-left {
+    float: left;
+  }
+  .to-right {
+    float: right;
+  }
+  .fix-to-top {
+    position: fixed;
+  }
+  /*  to top button */
+  .to-top {
+    width: 38px;
+    height: 38px;
     color: var(--dark);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 2;
   }
-  .lighter {
-    background-color: var(--lighter);
-    color: var(--dark);
-  }
-  .dark {
-    background-color: var(--dark);
-    color: var(--light);
-  }
-  .darker {
-    background-color: var(--darker);
-    color: var(--light);
-  }
+
   /* media queries */
-  @media screen and (min-width: 1171px) {
-    section {
-      width: 1124px;
-      margin: auto;
+  @media screen and (min-width: 1368px) {
+    #root {
+      width: 1350px;
+      margin: 0 auto;
     }
-  }
-  @media screen and (max-width: 768px) {
-    section {
-      margin: 1rem auto;
-    }
-    .container {
-      padding: 1rem;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .headline {
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+    #root .topnav {
+      width: 1350px;
     }
   }
 </style>
