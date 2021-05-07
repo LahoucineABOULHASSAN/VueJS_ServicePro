@@ -2,7 +2,7 @@
   <ul class="menu to-right">
     <NavItem v-for="link in links" :key="link.link" :link="link" />
     <li href="#" class="navBtn" @click="displayMenu">
-      <i class="bars icon responsive-btn"></i>
+      <i class="bars icon large responsive-btn"></i>
     </li>
   </ul>
 </template>

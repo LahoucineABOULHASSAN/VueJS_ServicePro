@@ -69,6 +69,7 @@ export default {
 }
 .topnav .navBtn {
   display: none;
+  color: var(--blue);
 }
 .topnav .navBtn:hover {
   background: none;
@@ -96,9 +97,9 @@ export default {
   .topnav .navBtn {
     display: block;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
-    padding: 0.9rem;
+    padding: 0.5rem;
   }
   .topnav .menu .nav-item:hover {
     border: none;
