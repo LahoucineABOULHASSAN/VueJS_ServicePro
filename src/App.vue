@@ -45,6 +45,10 @@ export default {
   padding: 0;
   font-family: sans-serif;
   box-sizing: border-box;
+  transition: all 0.8s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -63,6 +67,15 @@ ul {
   display: grid;
   grid-gap: 1rem;
 }
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex-row {
+  flex-direction: row;
+  justify-content: space-between;
+}
 /* -------------------------------------- */
 /* special classes */
 .to-left {
@@ -74,11 +87,11 @@ ul {
 /* media queries */
 @media screen and (min-width: 1368px) {
   #root {
-    width: 1350px;
+    max-width: 1350px;
     margin: 0 auto;
   }
   #root .topnav {
-    width: 1350px;
+    max-width: 1350px;
   }
 }
 </style>

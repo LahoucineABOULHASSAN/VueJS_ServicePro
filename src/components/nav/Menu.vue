@@ -7,31 +7,23 @@
   </ul>
 </template>
 <script>
-  import NavItem from './NavItem'
-  export default {
-    name: 'Menu',
-    components: {
-      NavItem,
-    },
-    data() {
-      return {
-        links: [
-          { link: '#home', value: 'home' },
-          { link: '#our-services', value: 'our services' },
-          { link: '#about-us', value: 'about us' },
-          { link: '#subscribe', value: 'subscribe' },
-        ],
-      }
-    },
-    methods: {
-      displayMenu() {
-        // get the DOM items
-        const topNav = document.querySelector('.topnav')
-        const responsiveBtn = document.querySelector('.responsive-btn')
-        topNav.classList.toggle('responsive')
-        responsiveBtn.classList.toggle('times')
-        responsiveBtn.classList.toggle('bars')
-      },
-    },
-  }
+import NavItem from "./NavItem";
+import { displayMenu } from "../../utilities/nav";
+export default {
+  name: "Menu",
+  components: {
+    NavItem,
+  },
+  data() {
+    return {
+      links: [
+        { link: "#our-services", value: "services" },
+        { link: "#work", value: "solutions" },
+        { link: "#about-us", value: "about us" },
+        { link: "#subscribe", value: "subscribe" },
+      ],
+      displayMenu,
+    };
+  },
+};
 </script>
